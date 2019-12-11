@@ -1,0 +1,277 @@
+body {
+    margin: 0px;
+    position: relative;
+    background: #fafafa;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.menu-drawer {
+    font-size: 24px;
+    padding: 15px 20px;
+    cursor: pointer;
+    position: absolute;
+    transition: background .5s;
+}
+
+.menu-drawer:hover {
+    background: #2c3e50;
+}
+
+.header-container {
+    position: relative;
+    top: 0px;
+    height: auto;
+    color: #F0F0F0;
+    width: 100%;
+    background: #34495e;
+    box-shadow: 0px 0px 10px #000;
+    overflow: hidden;
+}
+
+.profile-title {
+    position: relative;
+    padding: 20px 10px;
+    display: inline-block;
+    margin-left: 50px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 20px;
+}
+
+.card-intro {
+    grid-column-start: 1;
+    grid-column-end: -1;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    -moz-box-shadow: 0px 4px 4px #00000066;
+    -webkit-box-shadow: 0px 4px 4px #00000066;
+    box-shadow: 0px 4px 4px #7a7a7a;
+    margin-bottom: 20px;
+    text-align: center;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.card-intro::before {
+    position: absolute;
+    background: linear-gradient(#00000021, #000);
+    z-index: -19;
+    width: 100%;
+    height: 100%;
+    content: ".";
+    top: 0;
+    left: 0;
+}
+
+.grid-card {
+    cursor: pointer;
+    min-width: calc(100% / 3);
+    background: #ededed;
+    margin: 10px;
+    border-radius: 10px;
+    padding: 10px;
+    border: 2px solid #e1e1e1;
+    text-align: center;
+    overflow: hidden;
+    transition: all .5s;
+}
+
+.grid-card:hover {
+    background: #e1e1e1;
+}
+
+.grid-card img {
+    max-width: 50px;
+    max-height: 50px;
+}
+
+.footer {
+    /*nanti ubah jadi relative*/
+    position: fixed;
+    display: block;
+    width: 100%;
+    padding: 10px 0px;
+    background: #212121;
+    text-align: center;
+    color: white;
+    bottom: 0px;
+    left: 0px;
+    z-index: 1;
+}
+
+
+/*Bagian Navigasi Kiri*/
+
+#blank {
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    position: fixed;
+    display: none;
+    background: #000000;
+    opacity: .5;
+    z-index: 9;
+}
+
+.navigation-view {
+    grid-column: 2/1;
+    position: fixed;
+    width: 300px;
+    background: white;
+    top: 0px;
+    left: -320px;
+    height: 100%;
+    box-shadow: 5px 0px 10px #212121;
+    -webkit-box-shadow: 5px 0px 10px #00000044;
+    transition: left .5s;
+    z-index: 10;
+}
+
+.nav-image {
+    position: relative;
+    background: url('../src/img/main/drawer_header.jpg');
+    height: 160px;
+    width: auto;
+    background-repeat: no-repeat;
+}
+
+.nav-image::before {
+    position: absolute;
+    background: -moz-linear-gradient(#00000000, #000000aa);
+    background: -webkit-linear-gradient(#00000000, #000000aa);
+    height: 100%;
+    width: 100%;
+    content: '';
+}
+
+.nav-image>label {
+    position: absolute;
+    bottom: 10px;
+    color: white;
+    padding: 10px;
+}
+
+.nav-image label>h1 {
+    font-size: 20px;
+    margin-bottom: 0px;
+}
+
+.navigation-view ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.navigation-view ul>li {
+    list-style: none;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.navigation-view ul>li>a {
+    position: relative;
+    padding: 20px 10px;
+    display: block;
+    text-decoration: none;
+    color: #2a2a2a;
+    transition: background .5s;
+}
+
+.navigation-view ul>li>a:hover {
+    background: #eaeaeaee
+}
+
+.back-nav {
+    padding: 10px 20px;
+    position: absolute;
+    right: 0px;
+    color: white;
+    cursor: pointer;
+    font-size: 30px;
+    font-weight: 300;
+    margin: 10px;
+    border-radius: 50px;
+    transition: background .5s;
+}
+
+.back-nav:hover {
+    background: #00000066;
+}
+
+.back-nav::after {
+    content: '\2039';
+}
+
+.tombol-kalkulator {
+    width: auto;
+    display: grid;
+    height: 250px;
+    grid-template-columns: auto auto auto;
+}
+
+.tombol-kalkulator button {
+    padding: 5px 14px;
+    text-align: center;
+    border: 0px;
+    margin: 1px;
+    background: #2d2d2d;
+    color: white;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.tombol-kalkulator button:hover {
+    background: #1a1a1a;
+}
+
+#deskripsi-kalk {
+    position: absolute;
+    font-size: 12px;
+    color: #f0f0f0;
+}
+
+#tbl-equal {
+    padding: 5px 14px;
+    text-align: center;
+    border: 0px;
+    margin: 1px;
+    background: #ff8d1a;
+    color: white;
+    font-size: 25px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#tbl-equal:hover {
+    background: #ff4d01;
+}
+
+#txtbox-kalk {
+    width: 90%;
+    margin: 10px auto;
+    position: relative;
+    text-align: right;
+    border: 0px;
+    font-size: 25px;
+    margin-top: 20px;
+    background: none;
+    color: white;
+}
+
+#kalkulator {
+    z-index: 10;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    text-align: center;
+    min-width: 250px;
+    transform: translate(-50%, -50%);
+    background: #1d1d1d;
+    border-radius: 10px;
+    box-shadow: 0px 0px 40px #00000044;
+    overflow: hidden;
+    padding: 10px;
+}

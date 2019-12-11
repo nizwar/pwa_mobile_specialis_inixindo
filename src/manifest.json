@@ -1,0 +1,41 @@
+{
+    "short_name": "Nizwar MWS",
+    "name": "Nizwar Syafuan MWS",
+    "icons": [
+      {
+        "src": "src/img/icon/nizwar_id48.png",
+        "type": "image/png",
+        "sizes": "48x48"
+      },
+      {
+        "src": "src/img/icon/nizwar_id96.png",
+        "type": "image/png",
+        "sizes": "96x96"
+      },
+      {
+        "src": "src/img/icon/nizwar_id192.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      },
+      {
+        "src": "src/img/icon/nizwar_id128.png",
+        "type": "image/png",
+        "sizes": "128x128"
+      },
+      {
+        "src": "src/img/icon/nizwar_id152.png",
+        "type": "image/png",
+        "sizes": "152x152"
+      }, 
+      {
+        "src": "src/img/icon/nizwar_id512.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ],
+    "background_color": "#34495e",
+    "display": "standalone",
+    "orientation": "portrait",
+    "theme_color": "#34495e",
+    "start_url": "https://nizwar-id.firebaseapp.com/"
+  }

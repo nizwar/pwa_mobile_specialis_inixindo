@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Nizwar ID - Penerapan Map API</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta content='#2c3e50' name='theme-color' />
+    <meta content='#2c3e50' name='msapplication-navbutton-color' />
+    <meta content='#2c3e50' name='apple-mobile-web-app-status-bar-style' />
+    <meta content='#2c3e50' name='msapplication-navbutton-color' />
+    <meta content='#2c3e50' name='theme-color' />
+    <style>
+        #map {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+        
+        body {
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id='map'></div>
+    <script>
+        var map;
+
+        alert('Uji coba membuat rute dengan GoogleMap, dari Rumah saya ke UBSI');
+
+        function initMap() {
+            var latLng = [{
+                lat: -0.0163271,
+                lng: 109.3205035
+            }, {
+                lat: -0.058655,
+                lng: 109.355853
+            }];
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: {
+                    lat: -0.034708,
+                    lng: 109.333268
+                },
+                zoom: 12
+            });
+
+
+            new google.maps.Marker({
+                position: latLng[0],
+                map: map,
+                title: "Kediaman Mochamad Nizwar Syafuan"
+            });
+
+            new google.maps.Marker({
+                position: latLng[1],
+                map: map,
+                title: "Universitas Bina Sarana Informatika"
+            });
+
+            var DirRender = new google.maps.DirectionsRenderer();
+            DirRender.setMap(map);
+
+            var minta = {
+                origin: latLng[0],
+                destination: latLng[1],
+                travelMode: 'DRIVING'
+            }
+            new google.maps.DirectionsService().route(minta, function(result, status) {
+                console.log(result, status);
+                //if(status=='OK'){
+                DirRender.setDirections(result);
+                //}
+            });
+        }
+    </script>
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCeyNppJ5k3P7_mlrrzGfdmcwWP0CtrS9c&callback=initMap">
+    </script>
+
+</body>
+
+</html>

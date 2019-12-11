@@ -1,0 +1,64 @@
+body{margin:0px;} 
+        #markerMyPos {
+            background-image: url('src/me.png'); 
+            background-size: contain;
+            background-repeat: no-repeat;
+            width:35px;
+            height:50px;
+            top:-20px;
+            cursor: pointer;
+        }
+        .mapboxgl-popup{
+            top:-50px !important;
+        }
+        .laundry-marker{ 
+            background-image: url('src/laundry_marker.png'); 
+            background-size: contain;
+            background-repeat: no-repeat;
+            width:35px;
+            height:50px;
+            top:-20px;
+            cursor: pointer;
+        }
+        .popup-nizwar{
+            max-width:300px;
+            overflow: hidden; 
+        }
+        .popup-nizwar h1{
+            margin-top:0px;
+        }
+        
+        .gbr{
+            position:absolute;
+            top:0px;left:0px;
+            background-size:cover;
+            width:100%;
+            overflow: hidden;
+            height:120px
+        } 
+        .gbr::after{
+            content: '';
+            width:100%;
+            top:0px;
+            left:0px;
+            position: absolute;
+            height:100%;
+            background: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.5));
+        }
+        .alas{
+            display:block;
+            position:relative;
+            margin-top:80px;
+        }
+        .alas h1{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color:white;
+        }
+        .leaflet-popup-content-wrapper, .leaflet-popup-tip {
+            background: white;
+            color: #333;
+            overflow: hidden;
+            display: block;
+            position: relative;
+            box-shadow: 0px 0px 0px;
+        }
